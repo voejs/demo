@@ -1,3 +1,3 @@
 export default app => {
-  app.router.get('/', app.controller.index.hello);
+  app.router.get('/', 'index.hello');
 }

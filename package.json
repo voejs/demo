@@ -27,6 +27,6 @@
     "build": "NODE_ENV=production voe build build/webpack.production.js"
   },
   "dependencies": {
-    "@voejs/voe": "^1.0.1"
+    "@voejs/voe": "^1.0.4"
   }
 }

@@ -3,8 +3,8 @@ import extend_context_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/extend/co
 import extend_request_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/extend/request.js';
 import extend_response_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/extend/response.js';
 import router_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/router.js';
-import config_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/config.production.js';
-import config_plugin_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/plugin.production.js';
+import config_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/config.development.js';
+import config_plugin_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/plugin.development.js';
 import webview_testDist from '/Users/shenyunjie/CodeBox/voejs/demo/app/webview/test_dist.vue';
 import controller_index from '/Users/shenyunjie/CodeBox/voejs/demo/app/controller/index.js';
 import service_testAbc from '/Users/shenyunjie/CodeBox/voejs/demo/app/service/test_abc.js';
