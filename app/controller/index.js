@@ -11,4 +11,18 @@ export default class IndexController extends Controller {
       abc: this.service.testAbc.hello()
     }
   }
+  
+  notFound(ctx) {
+    ctx.body = ctx.webview.notFound;
+    ctx.props = {
+      referer: ctx.referer
+    }
+  }
+  
+  error(ctx) {
+    ctx.body = ctx.webview.error;
+    ctx.props = {
+      referer: ctx.referer
+    }
+  }
 }
