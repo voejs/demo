@@ -6,33 +6,22 @@
           <div class="logo">H</div>
           <flex :span="1" class="list" blocked>
             <ul>
-              <li>
-                <Icon type="cube"></Icon>
-                <div class="detail">
-                  <div class="name">Dash Broad</div>
-                  <ul>
-                    <li>dfafsa1</li>
-                    <li>dfafsa2</li>
-                    <li>dfafsa3</li>
-                  </ul>
+              <li v-for="(parent, parentIndex) in $store.state.main.nav" :key="parentIndex">
+                <Tooltip :content="parent.name" placement="right" v-if="!parent.child">
+                  <Icon :type="parent.icon" class="icon"></Icon>
+                </Tooltip>
+                <div class="item" v-else>
+                  <Icon :type="parent.icon" class="icon"></Icon>
+                  <div class="detail">
+                    <div class="name">{{parent.name}}</div>
+                    <ul v-if="parent.child">
+                      <li v-for="(item, itemIndex) in parent.child" :key="itemIndex">
+                        <Icon :type="item.icon" v-if="item.icon"></Icon>
+                        <span>{{item.name}}</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <Icon type="pie-graph"></Icon>
-                <div class="detail">
-                  <div class="name">大盘数据</div>
-                  <ul>
-                    <li>dfafsa4</li>
-                    <li>dfafsa5</li>
-                    <li>dfafsa6</li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <Icon type="battery-charging"></Icon>
-              </li>
-              <li>
-                <Icon type="nuclear"></Icon>
               </li>
             </ul>
           </flex>
@@ -55,9 +44,7 @@
         </flex>
       </transition>
       <transition name="fade" appear>
-        <div class="content">
-          <render></render>
-        </div>
+        <render></render>
       </transition>
     </flex>
   </flex>
@@ -77,14 +64,11 @@
   @import "~normalize.css";
   @import "~iview/dist/styles/iview.css";
   @import "~vue-animate/src/vue-animate";
-
-  @side-color-logo: #27203A;
-  @side-color-bg: #3D315B;
-  @side-color-hover: #4F446B;
+  @import "./app/lib/style";
 
   html,body,.app{
     overscroll-behavior: contain;
-    background-color: #f0f2f5;
+    background-color: @bg;
     height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
@@ -121,8 +105,21 @@
             color:#fff;
             text-align: center;
             line-height: 50px;
+            height: 50px;
             cursor: pointer;
-            transition: all .3s ease-in-out;
+            .icon{
+              display: block;
+              height: 50px;
+              line-height: 50px;
+              width: 100%;
+              text-align: center;
+            }
+            & > .item{
+              display: block;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+            }
             .detail{
               display: none;
               min-width: 200px;
@@ -151,6 +148,10 @@
                   padding: 0px 20px;
                   border-bottom: 1px solid #f9f9f9;
                   transition: all .3s ease;
+                  i{
+                    display: inline-block;
+                    width: 20px;
+                  }
                   &:hover{
                     background-color: #f9f9f9;
                   }
@@ -178,10 +179,10 @@
             font-size: 14px;
             transition:all .3s ease;
             &:link,&:visited{
-              color: #999;
+              color: #666;
             }
             &:hover{
-              color: #333;
+              color: @side-color-logo;
             }
           }
         }

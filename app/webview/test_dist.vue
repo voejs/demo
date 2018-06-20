@@ -1,5 +1,7 @@
 <template>
-  <h1>dafa - {{abc}} <button @click="up">++</button></h1>
+  <page-content>
+    <h1>dafa - {{abc}} <button @click="up">++</button></h1>
+  </page-content>
 </template>
 
 <script>

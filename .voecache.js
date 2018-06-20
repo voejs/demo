@@ -5,12 +5,13 @@ import extend_response_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/extend/r
 import router_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/router.js';
 import config_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/config.development.js';
 import config_plugin_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/plugin.development.js';
+import controller_index from '/Users/shenyunjie/CodeBox/voejs/demo/app/controller/index.js';
 import components_flex from '/Users/shenyunjie/CodeBox/voejs/demo/app/components/flex.vue';
 import components_headerUser from '/Users/shenyunjie/CodeBox/voejs/demo/app/components/header-user.vue';
-import controller_index from '/Users/shenyunjie/CodeBox/voejs/demo/app/controller/index.js';
-import service_testAbc from '/Users/shenyunjie/CodeBox/voejs/demo/app/service/test_abc.js';
 import webview_testDist from '/Users/shenyunjie/CodeBox/voejs/demo/app/webview/test_dist.vue';
-import webstore_adafds from '/Users/shenyunjie/CodeBox/voejs/demo/app/webstore/adafds.js';
+import service_testAbc from '/Users/shenyunjie/CodeBox/voejs/demo/app/service/test_abc.js';
+import webstore_main from '/Users/shenyunjie/CodeBox/voejs/demo/app/webstore/main.js';
+import components_pageContent from '/Users/shenyunjie/CodeBox/voejs/demo/app/components/page-content.vue';
 export const map = {
   "extend_application_0": extend_application_0,
   "extend_context_0": extend_context_0,
@@ -19,12 +20,13 @@ export const map = {
   "router_0": router_0,
   "config_config_0": config_config_0,
   "config_plugin_config_0": config_plugin_config_0,
+  "controller_index": controller_index,
   "components_flex": components_flex,
   "components_headerUser": components_headerUser,
-  "controller_index": controller_index,
-  "service_testAbc": service_testAbc,
   "webview_testDist": webview_testDist,
-  "webstore_adafds": webstore_adafds
+  "service_testAbc": service_testAbc,
+  "webstore_main": webstore_main,
+  "components_pageContent": components_pageContent
 };
 export const vars = {
   "webview": {
@@ -32,7 +34,8 @@ export const vars = {
   },
   "components": [
     "components_flex",
-    "components_headerUser"
+    "components_headerUser",
+    "components_pageContent"
   ],
   "controller": {
     "index": "controller_index"
@@ -42,7 +45,7 @@ export const vars = {
     "testAbc": "service_testAbc"
   },
   "webstore": [
-    "webstore_adafds"
+    "webstore_main"
   ],
   "extend": {
     "application": [
