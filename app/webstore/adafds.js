@@ -3,6 +3,7 @@ const child = new ChildVuex('test');
 export default child;
 child.setState({
   test: {
-    a: 1, b:2
+    a: 1, b:2,
+    text: 'worrrrrrrr'
   }
 });

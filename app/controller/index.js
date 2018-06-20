@@ -5,7 +5,7 @@ export default class IndexController extends Controller {
   }
   
   hello(ctx) {
-    console.log(ctx);
+    console.log(ctx, 222);
     ctx.body = ctx.webview.testDist;
     ctx.props = {
       abc: this.service.testAbc.hello()

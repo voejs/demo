@@ -1,5 +1,5 @@
 <template>
-  <h1>dafa - {{abc}}</h1>
+  <h1>dafa - {{abc}} <button @click="up">++</button></h1>
 </template>
 
 <script>
@@ -7,6 +7,11 @@
     name: "test",
     props: {
       abc: String
+    },
+    methods: {
+      up() {
+        this.$store.test.commit('test.text', 'dskajfhdsihfsadhkfhaskhfka');
+      }
     }
   }
 </script>

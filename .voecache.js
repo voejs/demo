@@ -5,9 +5,11 @@ import extend_response_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/extend/r
 import router_0 from '/Users/shenyunjie/CodeBox/voejs/demo/app/router.js';
 import config_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/config.development.js';
 import config_plugin_config_0 from '/Users/shenyunjie/CodeBox/voejs/demo/config/plugin.development.js';
-import webview_testDist from '/Users/shenyunjie/CodeBox/voejs/demo/app/webview/test_dist.vue';
+import components_flex from '/Users/shenyunjie/CodeBox/voejs/demo/app/components/flex.vue';
+import components_headerUser from '/Users/shenyunjie/CodeBox/voejs/demo/app/components/header-user.vue';
 import controller_index from '/Users/shenyunjie/CodeBox/voejs/demo/app/controller/index.js';
 import service_testAbc from '/Users/shenyunjie/CodeBox/voejs/demo/app/service/test_abc.js';
+import webview_testDist from '/Users/shenyunjie/CodeBox/voejs/demo/app/webview/test_dist.vue';
 import webstore_adafds from '/Users/shenyunjie/CodeBox/voejs/demo/app/webstore/adafds.js';
 export const map = {
   "extend_application_0": extend_application_0,
@@ -17,16 +19,21 @@ export const map = {
   "router_0": router_0,
   "config_config_0": config_config_0,
   "config_plugin_config_0": config_plugin_config_0,
-  "webview_testDist": webview_testDist,
+  "components_flex": components_flex,
+  "components_headerUser": components_headerUser,
   "controller_index": controller_index,
   "service_testAbc": service_testAbc,
+  "webview_testDist": webview_testDist,
   "webstore_adafds": webstore_adafds
 };
 export const vars = {
   "webview": {
     "testDist": "webview_testDist"
   },
-  "components": {},
+  "components": [
+    "components_flex",
+    "components_headerUser"
+  ],
   "controller": {
     "index": "controller_index"
   },
