@@ -9,23 +9,18 @@ child.setState({
       link: '/'
     },
     {
-      icon: 'compose',
-      name: '表单页',
+      icon: 'bowtie',
+      name: '豆瓣热门电影',
+      link: '/douban'
+    },
+    {
+      icon: 'social-html5',
+      name: '常用动画集合',
       child: [
         {
-          icon: 'flash',
-          name: '基础表单',
-          link: '/edit'
-        },
-        {
-          icon: 'wand',
-          name: '分布表单',
-          link: '/edit'
-        },
-        {
-          icon: 'mic-a',
-          name: '高级表单',
-          link: '/edit'
+          icon: 'wifi',
+          name: '列表推移',
+          link: '/animate/list'
         }
       ]
     }

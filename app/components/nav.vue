@@ -85,7 +85,7 @@
             transition: all .3s ease;
             i{
               display: inline-block;
-              width: 20px;
+              width: 15px;
             }
             &:hover{
               background-color: #f9f9f9;

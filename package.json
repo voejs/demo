@@ -10,7 +10,8 @@
     "url": "git+ssh://git@github.com:voejs/demo.git"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.3",
+    "@voejs/runtime": "^1.0.1",
+    "autoprefixer": "^8.6.4",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-jsx": "^6.18.0",
@@ -28,18 +29,22 @@
     "vue-loader": "^15.2.4",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.6.0",
+    "webpack": "^4.12.2",
     "webpack-cli": "^2.0.15",
     "webpack-dev-server": "^3.1.3"
   },
   "scripts": {
+    "test": "NODE_ENV=development node_modules/.bin/webpack-dev-server --config=build/webpack.development.js --progress",
+    "test-build": "NODE_ENV=production node_modules/.bin/webpack --config=build/webpack.production.js -p --progress --hide-modules",
     "dev": "NODE_ENV=development voe dev build/webpack.development.js",
     "build": "rm -rf dist/ && NODE_ENV=production voe build build/webpack.production.js"
   },
   "dependencies": {
-    "@voejs/voe": "^1.0.11",
+    "@voejs/voe": "^1.0.13",
+    "axios": "^0.18.0",
     "iview": "^2.14.3",
     "normalize.css": "^8.0.0",
+    "velocity-animate": "^1.5.1",
     "vue-animate": "0.0.4"
   }
 }
